@@ -1,3 +1,5 @@
+#TODO update paths so that they: 1) are OS independent, 2) do not require chdir
+
 import os
 import fnmatch
 import glob
@@ -36,11 +38,11 @@ numParallel = 0   #number of parallel paths on each side
 distPerYear = 96   #max distance per year for retreat or advance in metres
 weights = "central"    # Central, Linear or equal
 
-path = os.path.abspath('..')+"\\"
+path = os.path.abspath('./')
 
 # Main loop over glaciers
 for GlacierName in GlacierNames:
-	os.chdir(path+'/Code')
+	os.chdir(path)
 	print GlacierName
 	if Input in imageInv:
 		invert = 1
@@ -94,14 +96,14 @@ for GlacierName in GlacierNames:
 			img = find('*.'+Input+'.tif',path+'Data/'+GlacierName+'/Landsat/'+folder[-1])
 		else:
 			img = find('*.B6.tif',path+'Data/'+GlacierName+'/Landsat/'+folder[-1])
-		os.chdir(path+'/Code')
+		os.chdir(path)
 		Method1.plotPaths(pathVectors,path+'Results/'+GlacierName+'/'+Input,GlacierName,img,numParallel,invert,Input,terminus[8],terminus[9])
-		os.chdir(path+'/Code')
+		os.chdir(path)
 		Method1.plotPathsDEM(pathVectors,path+'Results/'+GlacierName,GlacierName,path+'Data/'+GlacierName+'/'+DEMfile,numParallel,invert)
 
 		#8. Create series of images with terminus location
 		print "8.Generating terminus Plots"
-		os.chdir(path+'/Code')
+		os.chdir(path)
 		TI.terminusImages(pathVectors,landsatFiles,GlacierName,terminus,timeline,path+'Results/'+GlacierName+'/'+Input,invert,Input)
 
 	except:

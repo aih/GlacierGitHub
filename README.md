@@ -1,6 +1,7 @@
 
 #Install requirements for scipy and related packages on Ubuntu
 sudo apt-get update
-sudo apt-get -y install git python-dev python-pip python-gdal python-numpy python-scipy python-matplotlib python-skimage python-imaging-tk ipython ipython-notebook python-pandas python-sympy python-nose python-rpy2 r-base libmysqlclient-dev openssl
+sudo apt-get -y install git python-dev python-pip python-gdal python-numpy python-scipy python-matplotlib python-skimage python-imaging-tk ipython ipython-notebook python-pandas python-sympy python-nose python-rpy2 r-base libmysqlclient-dev openssl libtiff5
 
-sudo pip install google-api-python-client pyCrypto earthengine-api images2gif 
+sudo pip install google-api-python-client pyCrypto earthengine-api images2gif
+libtiff 
