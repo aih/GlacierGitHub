@@ -1,4 +1,6 @@
 import os
+import matplotlib
+matplotlib.use('Agg')
 from Tkinter import *
 try:
     from PIL import ImageTk
