@@ -11,7 +11,7 @@ try:
     from PIL import Image
 except:
     from Pillow import Image
-xml.etree.ElementTree as treeObj
+import xml.etree.ElementTree as treeObj
 from xml.dom.minidom import parseString,parse
 
 
