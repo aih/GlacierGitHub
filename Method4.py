@@ -1,9 +1,9 @@
+import os
 import rpy2.robjects as robjects
 import rpy2.rinterface as ri
 from rpy2.robjects.numpy2ri import numpy2ri
 from rpy2.robjects.conversion import py2ri
 import numpy
-import os
 robjects.numpy2ri.activate()
 
 def estimateTerminus(path,glacier,arcVector,timeline,ipTimeSeries,gm,invert,distPerYear, ip):

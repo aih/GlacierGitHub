@@ -1,4 +1,11 @@
 import os
+import fnmatch
+import glob
+try:
+    from PIL import Image
+except:
+    from pillow import Image
+
 import querydb
 import ee_download
 import Method1
@@ -6,9 +13,6 @@ import Method2
 import Method3
 import Method4
 import TI
-import fnmatch
-import glob
-from PIL import Image
 import rgbplot
 
 # Used in step 7

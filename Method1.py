@@ -1,3 +1,4 @@
+import os
 import gdal
 import time
 import numpy as np
@@ -7,8 +8,11 @@ from scipy.ndimage.filters import gaussian_filter1d
 import math
 import rpy2.robjects as robjects
 from rpy2.robjects.numpy2ri import numpy2ri
-import os
-from PIL import Image
+try:
+    from PIL import Image
+except:
+    from pillow import Image 
+
 import ConnectedComponentAStar
 robjects.numpy2ri.activate()
 

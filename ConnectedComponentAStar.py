@@ -11,15 +11,15 @@ Method procedure:
 Method output
 
 '''
+import os
+from copy import deepcopy
+import time
 import gdal
 from skimage import measure
 from matplotlib import pyplot as plt
 import numpy
 import math
-import time
 import pqdict
-import os
-from copy import deepcopy
 
 def astar(dataset,src,goal,DEMfile,sample):
 

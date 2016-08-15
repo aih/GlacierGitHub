@@ -1,8 +1,12 @@
-from PIL import Image
 import os
-import numpy
-from math import exp
 import shutil
+from math import exp
+try:
+    from PIL import Image
+except:
+    from pillow import Image
+
+import numpy
 
 def classify(path,p_nonzero,b0,b1,b2):
 	"This classifies the Band 61 images"

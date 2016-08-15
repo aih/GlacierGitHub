@@ -6,13 +6,13 @@ import matplotlib.pyplot as plt
 
 # modified July 20, 2014 
 import glob
-import os
 import xlrd
-from PIL import Image
-import numpy
-import xml.etree.ElementTree as treeObj
+try:
+    from PIL import Image
+except:
+    from Pillow import Image
+xml.etree.ElementTree as treeObj
 from xml.dom.minidom import parseString,parse
-import gdal
 
 
 

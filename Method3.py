@@ -1,7 +1,11 @@
+import os
 import rpy2.robjects as robjects
 from rpy2.robjects.numpy2ri import numpy2ri
-import os
-from PIL import Image
+try:
+    from PIL import Image
+except:
+    from pillow import Image
+
 import gdal
 import numpy
 robjects.numpy2ri.activate()

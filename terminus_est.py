@@ -1,3 +1,5 @@
+import os
+import itertools
 import gdal
 from matplotlib import pyplot as plt
 import numpy
@@ -5,9 +7,10 @@ from scipy import ndimage as ndi
 from pandas import Series
 from matplotlib.pyplot import xticks
 import math
-import pylab
-import itertools
-import os
+try:
+    import pylab
+except:
+    from matplotlib import pylab
 
 
 def terminus_est(dd1,tt,distanceTab, invert, distPerYear,flip):

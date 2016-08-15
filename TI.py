@@ -1,3 +1,4 @@
+import os
 import gdal
 import time
 import numpy as np
@@ -5,9 +6,11 @@ import rpy2.robjects as robjects
 import rpy2.rinterface as ri
 from rpy2.robjects.numpy2ri import numpy2ri
 from rpy2.robjects.conversion import py2ri
-import os
 from images2gif import writeGif
-from PIL import Image
+try:
+    from PIL import Image
+except:
+    from pillow import Image
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 robjects.numpy2ri.activate()

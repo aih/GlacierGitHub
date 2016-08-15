@@ -1,6 +1,9 @@
-from Tkinter import *
-import ImageTk
 import os
+from Tkinter import *
+try:
+    from PIL import ImageTk
+except:
+    from pillow import ImageTk
 
 class App:
 

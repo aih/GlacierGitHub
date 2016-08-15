@@ -1,14 +1,21 @@
-import ee_download
+import os
 import numpy as np
 import scipy.misc as mi
-import os
-from PIL import Image
+try:
+    from PIL import Image
+except:
+    from pillow import Image
 from libtiff import TIFF
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
-import pylab
+try:
+    import pylab
+except:
+    from matplotlib import pylab
 import gdal
 import shutil
+
+import ee_download
 import Method2
 
 def rgbPlot(image):
